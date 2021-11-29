@@ -32,7 +32,7 @@ def view_location(request, location):
     image = Image.objects.filter(location__name=location)
     return render(request, 'category.html', {"image": image, "locations": locations, 'categories': categories})
 
-
-
-
-    
+def view_category(request, category):
+    categories = Image.objects.distinct().values_list('category__name', flat=True)
+    image = Image.objects.filter(category__name=category)
+    return render(request, 'category.html', {"image": image, 'categories': categories})
