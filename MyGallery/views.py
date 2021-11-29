@@ -26,6 +26,11 @@ def search_results(request):
         message = "You havent searched for any term"
         return render(request, 'search.html',{"message":message})
 
+def view_location(request, location):
+    locations = Image.objects.distinct().values_list('location__name', flat=True)
+    categories = Image.objects.distinct().values_list('category__name', flat=True)
+    image = Image.objects.filter(location__name=location)
+    return render(request, 'category.html', {"image": image, "locations": locations, 'categories': categories})
 
 
 
