@@ -1,33 +1,30 @@
 {% extends 'base.html' %}
 <!-- code below -->
 <ul class="cd-hero-slider">
-<!-- Content -->
-<div class="cd-hero">
-
-      <!-- Page 1 Gallery One -->
-      <li class="selected">                    
-          <div class="cd-full-width">
-              <div class="container-fluid js-tm-page-content" data-page-type="gallery">
-                  <div class="tm-img-gallery-container">
-                      <div class="tm-img-gallery gallery-one">
-                      <!-- Gallery One pop up connected with JS code below -->
-                      {% for image in image %}
-                          <div class="grid-item">
-                              <figure class="effect-sadie">
-                                  <img src="{{image.image_image.url}}" alt="Image" class="img-fluid tm-img">
-                                  <figcaption>
-                                      <h2 class="tm-figure-title">{{image.name}} <span><strong></strong></span></h2>
-                                      <a href="{{photo.image_image.url}}">READ MORE ...</a>
-                                      <p>{{image.description}}</p>
-                                  </figcaption>           
-                              </figure>
-                          </div>
-                          {% endfor %}                                                                   
-                      </div>                                 
-                  </div>
-              </div>                                                    
-          </div>             
-      </li>
-  </ul>
+  <!-- Content -->
+  <div class="cd-hero">
+    <li class="selected">
+      <div class="cd-full-width">
+        <div class="container-fluid js-tm-page-content" data-page-type="gallery">
+          <div class="tm-img-gallery-container">
+            <div class="tm-img-gallery gallery-one">
+              <!-- Gallery One pop up connected with JS code below -->
+              {% for image in image %}
+              <div class="grid-item">
+                <figure class="effect-sadie">
+                  <img src="{{image.image_image.url}}" alt="Image" class="img-fluid tm-img">
+                  <figcaption>
+                    <h2 class="tm-figure-title">{{image.name}} <span><strong></strong></span></h2>
+                    <a href="{{photo.image_image.url}}">READ MORE ...</a>
+                    <p>{{image.description}}</p>
+                  </figcaption>
+                </figure>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+</ul>
 </div>
- 
