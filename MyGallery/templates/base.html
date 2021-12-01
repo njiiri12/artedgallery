@@ -10,11 +10,11 @@
     {% else %}
     <title>Arted Gallery</title>
     {% endif %} {% block styles %} {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 </head>
 {% include 'navbar.html' %}
-<body style="background-color: rgb(154, 154, 255);">
+<body >
     <div class="container-fluid" style="background: linear-gradient(to top, #e0eafc, #cfdef3);">
         {% block content %} {% endblock %}
         {% block scripts %}

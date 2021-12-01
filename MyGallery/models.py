@@ -34,15 +34,16 @@ class Image(models.Model):
     location = models.ForeignKey(
         Location, on_delete=models.CASCADE, default=None)
     category = models.ManyToManyField(Category)
-
-    def __str__(self):
-        return self.name
+   
 
     def save_image(self):
         self.save()
 
     def delete_image(self):
         self.delete()
+
+    def __str__(self):
+        return self.name
 
     @classmethod
     def get_image_by_id(cls, id):

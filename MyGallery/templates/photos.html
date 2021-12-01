@@ -1,30 +1,33 @@
-{% extends 'base.html' %}
-<!-- code below -->
-<ul class="cd-hero-slider">
-  <!-- Content -->
-  <div class="cd-hero">
-    <li class="selected">
-      <div class="cd-full-width">
-        <div class="container-fluid js-tm-page-content" data-page-type="gallery">
-          <div class="tm-img-gallery-container">
-            <div class="tm-img-gallery gallery-one">
-              <!-- Gallery One pop up connected with JS code below -->
-              {% for image in image %}
-              <div class="grid-item">
-                <figure class="effect-sadie">
-                  <img src="{{image.image_image.url}}" alt="Image" class="img-fluid tm-img">
-                  <figcaption>
-                    <h2 class="tm-figure-title">{{image.name}} <span><strong></strong></span></h2>
-                    <a href="{{photo.image_image.url}}">READ MORE ...</a>
-                    <p>{{image.description}}</p>
-                  </figcaption>
-                </figure>
+{% extends 'base.html' %} 
+
+{% block content %}
+  {% for photo in photos %}
+  <section class="wrapper">
+    <div class="container">
+    
+    <div class="row">
+      <div class="col-md-4">
+          <div class="card text-white card-has-bg click-col">
+            <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+            <div class="card-img-overlay d-flex flex-column">
+            <div class="card-body">
+                <small class="card-meta mb-2">{{ photo.name }}</small>
+                <h4 class="card-title mt-0 "><a class="text-white" herf="#">{{ photo.description }}</a></h4>
+                <small><i class="far fa-clock"></i>{{ photo.location }}</small>
+            </div>
+            <div class="card-footer">
+              <div class="media">
+              <img class="mr-3 rounded-circle" src="{{ photo.image.url }}" alt="Generic placeholder image" style="max-width:50px">       
               </div>
-              {% endfor %}
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </li>
-</ul>
-</div>
+      </div>    
+    </div>
+    
+  </div>
+  </section>
+  
+  {% endfor %}
+{% endblock %}
+
