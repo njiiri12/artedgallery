@@ -1,0 +1,1 @@
+web: gunicorn photosglobe.wsgi --log-file -

@@ -8,6 +8,9 @@ body {
 .card {
     color: black;
 }
+body > div > section > div{
+    display :flex;
+}
 
 
 h4 {

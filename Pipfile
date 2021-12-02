@@ -8,6 +8,10 @@ django = "*"
 django-bootstrap5 = "*"
 psycopg2 = "*"
 pillow = "*"
+gunicorn = "*"
+django-heroku = "*"
+cloudinary = "*"
+django-decouple = "*"
 
 [dev-packages]
 

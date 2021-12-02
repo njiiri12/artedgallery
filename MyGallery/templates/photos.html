@@ -1,33 +1,25 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 
 {% block content %}
-  {% for photo in photos %}
-  <section class="wrapper">
-    <div class="container">
-    
-    <div class="row">
-      <div class="col-md-4">
-          <div class="card text-white card-has-bg click-col">
-            <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
-            <div class="card-img-overlay d-flex flex-column">
-            <div class="card-body">
-                <small class="card-meta mb-2">{{ photo.name }}</small>
-                <h4 class="card-title mt-0 "><a class="text-white" herf="#">{{ photo.description }}</a></h4>
-                <small><i class="far fa-clock"></i>{{ photo.location }}</small>
-            </div>
-            <div class="card-footer">
-              <div class="media">
-              <img class="mr-3 rounded-circle" src="{{ photo.image.url }}" alt="Generic placeholder image" style="max-width:50px">       
-              </div>
-              </div>
-            </div>
-          </div>
-      </div>    
-    </div>
-    
-  </div>
-  </section>
-  
-  {% endfor %}
-{% endblock %}
+{% for photo in photos %}
 
+
+<div class="row">
+
+  <div class="container col-md-12 col-lg-4 g-4">
+
+    <div class="card ">
+      <img class="card-img-top" src="{{ photo.image.url }}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{ photo.name }}</h5>
+        <p class="card-text">{{photo.description}}</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+{% endfor %}
+{% endblock %}
