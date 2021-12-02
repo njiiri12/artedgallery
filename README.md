@@ -1,6 +1,6 @@
 # ARTEDGALLERY
 
-Second Independent project for Moringa Core,1st June,2018
+Second Independent project for Moringa Django,28th November,2021
 
 
 
