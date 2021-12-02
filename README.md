@@ -1,23 +1,23 @@
 # ARTEDGALLERY
 
-Second Independent project for Moringa Django,28th November,2021
+First Independent project for Moringa Django,28th November,2021
 
 
 
 ## Description
-A single page application for searching github users and repositories. The site uses the Github API to perform searches on Github, and display the results to the users.The website is made using angular js framework, and uses components, custom directives, custom pipes, routing modules and classes to make the finished product.
+An app used to display images according to their categories
 
 ## Technologies Used
-HTML
-
+HTMl
+DJANGO
 BOOTSTRAP
+CLAUDINARY
 
-Angular js
 
 
 ## Known Bugs
 
-No known bugs so far
+Heroku Deployment
 
 ## License
 
